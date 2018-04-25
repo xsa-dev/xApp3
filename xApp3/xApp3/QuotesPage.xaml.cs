@@ -9,9 +9,9 @@ using Xamarin.Forms.Xaml;
 
 namespace xApp3
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class QuotesPage : ContentPage
-	{
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class QuotesPage : ContentPage
+    {
         public string[] quotes = new string[] {
             "Наслаждайтесь тем, что вы делаете и вы никогда в своей жизни не будете работать.",
             "Миру наплевать на твое самоощущение и самоуважение. Мир ожидает от тебя каких-то достижений, перед тем как принять во внимание твое чувство собственного достоинства.",
@@ -25,7 +25,15 @@ namespace xApp3
             "Меня поражают все эти компании, которые занимаются мясом, молоком и яйцами, ведь под их носом их же конкуренты делают замечательные продукты на растительной основе, которые гораздо доступнее по цене и полезнее для здоровья. Производство растительной продукции гораздо рациональнее со всех сторон, потому что не требует жестокого обращения с животными, обходится дешевле. Если мы постараемся по-новому посмотреть на то, чем мы питаемся, и как эта еда попадает на наши тарелки, мы будем более открыты к пищевым инновациям.",
             };
 
-        public QuotesPage() => InitializeComponent();
+        public QuotesPage()
+        {
+            InitializeComponent();
+            slider.Value = 0.5;
+        }
 
+        void Handle_ValueChanged(object sender, ValueChangedEventArgs e)
+        {
+            label.Text = String.Format("Value is {0:F2}", e.NewValue);
+        }
     }
 }
