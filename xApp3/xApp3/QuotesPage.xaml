@@ -3,7 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="xApp3.QuotesPage">
     <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-        <Label Text="Hello World" x:Name="label" />
-        <Slider ValueChanged="Handle_ValueChanged" x:Name="slider"/>
+        <Label Text="{Binding 
+            Source={x:Reference slider}, 
+            Path=Value, 
+            StringFormat='Value is {0:F2}'}" x:Name="label"  />
+        <Slider x:Name="slider"/>        
     </StackLayout>
 </ContentPage>
