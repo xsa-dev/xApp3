@@ -28,7 +28,34 @@ namespace xApp3
         public QuotesPage()
         {
             InitializeComponent();
-            slider.Value = 0.5;
+            slider.Value = 16;
+            fontSize.Text = string.Format("Font Size: {0:F0}", slider.Value);
+            quote.Text = quotes[0];
+                       
+            var x = new OnPlatform<Thickness>
+            {
+                Android = new Thickness(20, 30, 20, 20),
+                WinPhone = new Thickness(20, 40, 20, 20)
+            };
+            Padding = x;
+        }
+
+        public void SliderChanged(object source, EventArgs e)
+        {
+            quote.FontSize = slider.Value;
+            fontSize.Text = string.Format("Font Size: {0:F0}", slider.Value);
+        }
+
+        int qutoNumber = 0;
+        public void QuoteNext(object source, EventArgs e)
+        {            
+            quote.Text = quotes[qutoNumber];
+            qutoNumber++;
+
+            if (qutoNumber == quotes.Length)
+            {
+                qutoNumber = 0;
+            }
         }
     }
 }
