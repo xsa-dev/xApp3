@@ -1,12 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="xApp3.ExersiseOne">
+             x:Class="xApp3.ExersiseOne"             
+             BackgroundColor="#127ac7">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout VerticalOptions="Center">
+            <Label Text="Welcome to Xamarin" 
+                   TextColor ="White" FontSize="30" FontAttributes="Bold" HorizontalOptions="Center"/>
+            <Label Text="Cross-platform apps made easy" 
+                   FontSize="18" TextColor="White" HorizontalOptions="Center"/>
+            <Button Text="Login" 
+                    HorizontalOptions="Fill" BackgroundColor="#1dabf0" TextColor="White"/>
+            <Button Text="Register" 
+                    HorizontalOptions="Fill" BackgroundColor="#1dabf0" TextColor="White"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
