@@ -13,7 +13,7 @@ namespace xApp3
 		{
 			InitializeComponent();
 
-			MainPage = new ExersiseOne();
+			MainPage = new ExersizeTwo();
 		}
 
 		protected override void OnStart ()
