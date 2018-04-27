@@ -2,8 +2,10 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="xApp3.ExersizeTwo">
-    
-        <ContentPage.Content>            
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+            iOS="0,20,0,0"/>
+    </ContentPage.Padding>
         <StackLayout>
             <StackLayout Padding="10,5,0,5">
             <Label Text="nyc_photographer"/>
@@ -21,5 +23,4 @@
                 <Label Text="This is shot yesterday in Skanor, Sweden, when driving home, from a couple days of work in Denmark"/>
             </StackLayout>            
         </StackLayout>
-    </ContentPage.Content>
 </ContentPage>

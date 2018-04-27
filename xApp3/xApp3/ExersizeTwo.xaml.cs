@@ -15,13 +15,6 @@ namespace xApp3
 		public ExersizeTwo ()
 		{
 			InitializeComponent ();
-
-            var x = new OnPlatform<Thickness>
-            {
-                iOS = new Thickness(0, 20, 0, 0),
-            };
-            Padding = x;
-
         }
 	}
 }
