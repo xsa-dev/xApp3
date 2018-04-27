@@ -13,7 +13,7 @@ namespace xApp3
 		{
 			InitializeComponent();
 
-			MainPage = new xApp3.QuotesPage();
+			MainPage = new ExersiseOne();
 		}
 
 		protected override void OnStart ()
